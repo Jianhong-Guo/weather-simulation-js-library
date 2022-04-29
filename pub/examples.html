@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+<link rel="stylesheet" type="text/css" href="waterMove.css">  
+<link rel="stylesheet" type="text/css" href="examples.css">  
+<script defer type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script defer type="text/javascript" src="./waterMove.js"></script>
+<script defer type="text/javascript" src="./examples.js"></script>
+</head>
+<body >
+<div>
+
+    <h1 class="header">Weather Simulation</h1>
+    <h4 class= "center">An app use to simulate different weathers, such as sunny, rainny...</h4>
+   
+    <div>
+    <input class ='inputbox' type='text' id="amount" placeholder = 'amount(from 1 to 10)' ></input>
+    <input class ='inputbox' type='text' id="speed" placeholder = 'speed(from 1 to 9)' ></input>
+    <input class ='inputbox' type='text' id="time" placeholder = 'time(seconds)' ></input>
+
+    <input class ='inputbox' type='text' id="direction" placeholder = 'direction(left/right)' ></input>
+    <input class ='inputbox' type='text' id="radius" placeholder = 'radius(>0)' ></input>
+    <input class ='inputbox' type='text' id="diff" placeholder = 'diff(>=0)' ></input>
+  
+
+    <input class ='inputbox' type='text' id="images" placeholder = 'images(1,2,3,4,5,)' ></input>
+    <input class ='inputbox' type='text' id="speeds" placeholder = 'speeds(1,2,3,4,5,)' ></input>   
+    </br>
+</br>
+</br>
+    </div>
+    <div>
+    <button class='submit' onclick = "displayRain()">rain</button>
+    <button class='submit' onclick = "displaySnow()">snow</button>
+    <button class='submit' onclick = "displayHail()">hail</button>
+    <button class='submit' onclick = "displaySun()">sun</button>
+    <button class='submit' onclick = "displayCloud()">cloud</button>
+    <button class='submit' onclick = "displayFog()">fog</button>
+    <button class='submit' onclick = "rainTime()">precipitation info</button>
+    <button class='submit' onclick = "clearAll()">clear All</button>
+    <button class='submit2' onclick = "instruction()">instruction</button>
+    <div class='submit2' href='./api.html'>
+        <a  href='./api.html'>
+           API
+        </a>
+     </div>
+    </div>
+    <div class="sun"></div>
+    <div class='cloudmove'></div>
+    <div class="hail hails"></div>
+  
+    <div class="rain drops"></div>
+    <div class="snow flakes"></div>
+    <div class="fogmove"></div>
+
+</div>
+
+</body>
+</html>

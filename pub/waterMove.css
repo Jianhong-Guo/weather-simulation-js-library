@@ -1,0 +1,263 @@
+
+.rain {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 1.5px;
+  height: 80px;
+  pointer-events: none;
+  border-bottom: 40px solid  rgb(125, 136, 179);
+  animation: drop 0.5s linear infinite;
+}
+
+.snowflake{
+  position: absolute;
+  bottom: 100%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgb(249, 250, 250);
+  animation: drop 0.5s linear infinite;
+}
+
+.sunshape{
+  position: absolute;
+  bottom: 90%;
+  height: calc(2px * var(--j));
+  width:calc(2px * var(--j));
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 50px rgb(255, 255, 255),
+    inset 20px 0 80px rgb(255, 61, 255),
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px rgb(253, 73, 253),
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px rgb(253, 72, 253),
+    10px 0 80px #0ff;
+  animation: go calc(5s * var(--i)) linear infinite;
+}
+
+@keyframes go {
+  0% {
+    transform: translate(-10vh, calc(1vh * var(--k)));
+  }
+  50% {
+    transform: translate(75vh, 0vh);
+  }
+  100% {
+    transform: translate(150vh,calc(1vh * var(--k))); 
+    
+}}
+
+.sunshape2{
+  position: absolute;
+  bottom: 90%;
+  height: calc(2px * var(--j));
+  width: calc(2px * var(--j));
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 50px rgb(255, 255, 255),
+    inset 20px 0 80px rgb(255, 61, 255),
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px rgb(253, 73, 253),
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px rgb(253, 72, 253),
+    10px 0 80px #0ff;
+  animation: go2 calc(5s * var(--i)) linear infinite;
+  
+}
+
+@keyframes go2 {
+  0% {
+    transform: translate(150vh,calc(1vh * var(--k)));    
+  }
+  50% {
+    transform: translate(75vh, 0vh);
+  }
+  100% {
+    transform: translate(0vh, calc(1vh * var(--k)));  
+}
+}
+
+@keyframes animate {
+  0% {
+      left: 0;
+  }
+
+  50% {
+      left: 100%;
+  }
+
+  0% {
+      left: 0%;
+  }
+}
+
+.hailstone{
+  position: absolute;
+  bottom: 100%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgb(215, 221, 245);
+  animation: drop 0.5s linear infinite;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  75% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(90vh);
+  }
+}
+
+@keyframes light{
+  0% {
+    transform: translateY(0vh);
+    transform: translateX(0vh);
+  }
+  75% {
+    transform: translateY(30vh);
+    transform: translateX(30vh);
+  }
+  100% {
+    transform: translateY(30vh);
+    transform: translateX(30vh);
+  }
+}
+
+
+
+.main {
+  width: 1px;
+  height: 60%;
+  margin-left: 7px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+  animation: stem 0.5s linear infinite;
+}
+
+@keyframes main {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.move {
+  width: 15px;
+  height: 10px;
+  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: move 0.5s linear infinite;
+  display: none;
+}
+
+body.move-toggle .move {
+  display: block;
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.fog{
+  overflow: hidden;
+}
+.fog img{
+  animation: cld calc(8s * var(--i)) linear infinite;
+  opacity: .6;
+  max-width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0%;
+}
+
+.fog2{
+  overflow: hidden;
+}
+.fog2 img{
+  animation: cld2 calc(8s * var(--i)) linear infinite;
+  opacity: .6;
+  max-width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0%;
+}
+
+
+.cloud img{
+  animation: cld calc(8s * var(--i)) linear infinite;
+  opacity: .6;
+  max-width: 100%;
+  height: 30%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  top: 0%;
+}
+.cloud2 img{
+  animation: cld2 calc(8s * var(--i)) linear infinite;
+  opacity: .6;
+  max-width: 100%;
+  height: 30%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  top: 0%;
+}
+
+
+@keyframes cld{
+  0%{
+      transform: translateX(-150%);
+  }
+  100%{
+      transform: translateX(100%);
+  }
+}
+
+@keyframes cld2{
+  0%{
+      transform: translateX(80%);
+  }
+  100%{
+      transform: translateX(-150%);
+  }
+}
+
+

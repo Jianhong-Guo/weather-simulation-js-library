@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel="stylesheet" type="text/css" href="api.css">  
+</head>
+<body >
+    <h1 class="header">Weather Simulation</h1>
+    <div class='submit2'>
+        <a class='link-text' href='./examples.html'>
+           back to main page
+        </a>
+     </div>
+    <h4 class= "center">An app use to simulate different weathers, such as sunny, rainny...</h4>
+   <div>
+       <div class='p'>Getting Started</div>
+       <li class="left">To use the WaterMove API, first add the jQuery script.</li>
+   </div>
+   <div>
+        <div class='p'>Constructor</div>
+        <div class="p1">new WaterMove()</div>
+        <div class="left">create an WaterMove object with all default arguements be 0s.</div>
+   </div>
+   <div>
+
+        <div class='p'>API Methods</div>
+        <div class="p1">.getRainTime()</div>
+        <div class="left">No argument needed, return the total time in second and the total precipitation for rainy as a string.</div>
+        <div class="p1">.getSnowTime()</div>
+        <div class="left">No argument needed, return the total time in second and the total precipitation for snowy as a string.</div>
+        <div class="p1">.getHailTime()</div>
+        <div class="left">No argument needed, return the total time in second and the total precipitation for hail as a string.</div>
+        <div class="p1">.clearInfo()</div>
+        <div class="left">No argument needed, set the obeject to default state.</div>
+        <div class="p1">.makeRain(amount, speed)</div>
+        <li class="left">A rainy animation with the amount arguments shows the amount of rain in a moment and the speed of rain drop.</li>
+        <li class="left">amount: the amount of rain in a moment, must be non-negative integers. 1 is the smallest amount.</li>
+        <li class="left">speed: the speed of rain drop, must be positive integers. 1 means fastest speed.</li>
+        <div class="p1">.makeSnow(amount, speed)</div>
+        <div class='left'>similar as .makeRain(amount, speed)</div>
+        <div class="p1">.makeHail(amount, speed)</div>
+        <div class='left'>similar as .makeRain(amount, speed)</div>
+        <div class="p1">. makeSun(amount, direction, speed, radius, height_diff)</div>
+        <li class='left'>The sun animation with the amount, direction, speed, radius and height_diff.</li>
+        <li class="left">amount: use to control whether the sun shows in web, only 0 shows false.</li>
+        <li class="left">direction: left/right, show the movement direction of the sun.</li>
+        <li class="left">speed: the speed of sun movement, must be positive integers.</li>
+        <li class="left">radius: the radius of the sun in px, should be positive.</li>
+        <li class="left">height_diff: the difference in vh between the highest and lowest position of sun, should be non-negative.</li>
+        
+        <div class="p1">.makeFog(amount,direction, i1, s1, i2, s2,i3,s3, i4,s4, i5, s5)</div>
+        <li class='left'>The fog animation.</li>
+        <li class="left">amount: use to control the number of images use to make fog, can add at most 5 images.</li>
+        <li class="left">direction: left/right, show the movement direction of the fog.</li>
+        <li class="left">is: the index of the images wanted, should be integers between 1-5.</li>
+        <li class="left">ss: the speed of the corresponding images, should be Value should be positive integers. 1 means fastest speed.</li>
+        
+        <div class="p1">.makeCloud(amount,direction, i1, s1, i2, s2,i3,s3, i4,s4, i5, s5)</div>
+        <div class='left'>similar as .makeFog(amount,direction, i1, s1, i2, s2,i3,s3, i4,s4, i5, s5)</div>
+   </div>
+
+
+</body>
+</html>
